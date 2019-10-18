@@ -32,9 +32,9 @@ public class CarsRestController {
 		return carService.getCars();
 	}
 
-	@GetMapping("/carros/{idcarsUser}")
-	public Car getCar(@PathVariable String plateNumber) {
-		Car car = carService.getCar(plateNumber);
+	@GetMapping("/carros/{platenumber}")
+	public Car getCar(@PathVariable String platenumber) {
+		Car car = carService.getCar(platenumber);
 		return car;
 	}
 
@@ -55,10 +55,10 @@ public class CarsRestController {
 		return car;
 	}	
 	
-	// DELETE /carsUser/{idcarsUser} - DELETE un carro existente 
-	@DeleteMapping("/carsuser/{idcarsUser}")
+	// DELETE /carsUser/{platenumber} - DELETE un carro existente 
+	@DeleteMapping("/carsuser/{platenumber}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	public void deleteCar(@PathVariable String plateNumber) {		
-		carService.deleteCar(plateNumber);
+	public void deleteCar(@PathVariable String platenumber) {		
+		carService.deleteCar(platenumber);
 	}
 }

@@ -33,9 +33,9 @@ public class UserRestController {
 		return userService.getUsers();
 	}
 
-	@GetMapping("/usuarios/{idUser}")
-	public User getUser(@PathVariable int idUser) {
-		User user = userService.getUser(idUser);
+	@GetMapping("/usuarios/{iduser}")
+	public User getUser(@PathVariable int iduser) {
+		User user = userService.getUser(iduser);
 		return user;
 	}
 
@@ -57,9 +57,9 @@ public class UserRestController {
 	}	
 	
 	// DELETE /users/{idUser} - DELETE un usuario existente 
-	@DeleteMapping("/usuarios/{idUser}")
+	@DeleteMapping("/usuarios/{iduser}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	public void deleteUser(@PathVariable int idUser) {		
-		userService.deleteUser(idUser);
+	public void deleteUser(@PathVariable int iduser) {		
+		userService.deleteUser(iduser);
 	}
 }
