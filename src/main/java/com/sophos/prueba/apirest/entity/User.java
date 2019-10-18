@@ -11,19 +11,18 @@ import javax.persistence.Table;
 @Table(name="users")
 public class User {	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	
-	@Column(name="idUser")
-	private Integer idUser;
+	@GeneratedValue(strategy=GenerationType.IDENTITY)	
+	@Column(name="iduser")
+	private Integer iduser;
 	
 	@Column(name="name")
 	private String name;
 	
-	@Column(name="lastName")
-	private String lastName;
+	@Column(name="lastname")
+	private String lastname;
 	
-	@Column(name="userName")
-	private String userName;
+	@Column(name="username")
+	private String username;
 	
 	@Column(name="password")
 	private String password;
@@ -37,11 +36,11 @@ public class User {
 	
 	// Getters y setters para el acceso a las propiedades 
 	public Integer getIdUser() {
-		return idUser;
+		return iduser;
 	}
 
-	public void setIdUser(Integer idUser) {
-		this.idUser = idUser;
+	public void setIdUser(Integer iduser) {
+		this.iduser = iduser;
 	}
 	
 	public String getName() {
@@ -53,19 +52,19 @@ public class User {
 	}
 
 	public String getLastName() {
-		return lastName;
+		return lastname;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setLastName(String lastname) {
+		this.lastname = lastname;
 	}
 	
 	public String getUserName() {
-		return userName;
+		return username;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUserName(String username) {
+		this.username = username;
 	}
 
 	public String getPassword() {
@@ -87,10 +86,10 @@ public class User {
 	@Override
 	public String toString() {
 		StringBuilder cadena = new StringBuilder();		
-		cadena.append("User [idUser=" + idUser + ", ");
-		cadena.append("name=" + userName + ", ");
-		cadena.append("lastName=" + lastName + ", ");
-		cadena.append("userName=" + userName + ", ");
+		cadena.append("User [iduser=" + iduser + ", ");
+		cadena.append("name=" + username + ", ");
+		cadena.append("lastname=" + lastname + ", ");
+		cadena.append("username=" + username + ", ");
 		cadena.append("password=" + password + ", ");
 		cadena.append("email=" + email + "]");
 		

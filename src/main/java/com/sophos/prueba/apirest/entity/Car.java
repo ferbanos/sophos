@@ -11,13 +11,12 @@ import javax.persistence.Table;
 @Table(name="carsuser")
 public class Car {	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)	
+	@Column(name="platenumber")
+	private String platenumber;
 	
-	@Column(name="plateNumber")
-	private String plateNumber;
-	
-	@Column(name="idUser")
-	private Integer idUser;
+	@Column(name="iduser")
+	private Integer iduser;
 	
 	@Column(name="model")
 	private Integer model;
@@ -50,11 +49,11 @@ public class Car {
 	}
 
 	public String getPlateNumber() {
-		return plateNumber;
+		return platenumber;
 	}
 
-	public void setPlateNumber(String plateNumber) {
-		this.plateNumber = plateNumber;
+	public void setPlateNumber(String platenumber) {
+		this.platenumber = platenumber;
 	}
 
 	public String getColor() {
@@ -66,18 +65,18 @@ public class Car {
 	}
 
 	public Integer getIdUser() {
-		return idUser;
+		return iduser;
 	}
 
-	public void setIdUser(Integer idUser) {
-		this.idUser = idUser;
+	public void setIdUser(Integer iduser) {
+		this.iduser = iduser;
 	}
 	
 	@Override
 	public String toString() {
 		StringBuilder cadena = new StringBuilder();		
-		cadena.append("CarsUsers [plateNumber=" + plateNumber + ", ");
-		cadena.append("idUser=" + idUser + ", ");
+		cadena.append("CarsUsers [platenumber=" + platenumber + ", ");
+		cadena.append("idUser=" + iduser + ", ");
 		cadena.append("model=" + model + ", ");
 		cadena.append("brand=" + brand + ", ");
 		cadena.append("color=" + color + "]");
